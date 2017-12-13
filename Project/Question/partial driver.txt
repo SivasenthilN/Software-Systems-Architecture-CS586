@@ -1,0 +1,90 @@
+main () { // partial driver
+….
+GasPump_1 gp1;
+float a, b;
+char ch;
+      cout<< "                          GasPump-1" << endl;
+      cout<< "                  MENU of Operations" << endl;
+      cout<< "          0. Activate(float, float)" << endl;
+      cout<< "          1. Start()" << endl;
+      cout<< "          2. PayCredit()" << endl;
+      cout<< "          3. Reject()" << endl;
+      cout<< "          4. Cancel()" << endl;
+      cout<< "          5. Approved()" << endl;
+      cout<< "          6. Super()" << endl;
+      cout<< "          7. Regular()" << endl;
+      cout<< "          8. StartPump()" << endl;
+      cout<< "          9. PumpGallon()" << endl;
+      cout<< "          a. StopPump()" << endl;
+      cout<< "          q. Quit the program" << endl;
+      cout<< "  Please make a note of these operations" << endl;
+      cout<< "           GasPump-1 Execution" << endl;
+      ch='1';
+  while (ch !='q') {
+      cout<< "  Select Operation: "<<endl;
+      cout<<"0-Activate,1-Start,2-PayCredit,3-Reject,4-Cancel,5-Approved,6-Super,";
+      cout<<"7-Regular, 8-StartPump, 9-PumpGallon, a-StopPump, q-quit"<<endl;
+      ch=getch();
+      switch (ch) {
+	case '0': { //Activate()
+			 cout<<"  Operation:  Activate(float a, float b)"<<endl;
+			 cout<<"  Enter value of the parameter a:"<<endl;
+			 cin>>a;
+			 cout<<"  Enter value of the parameter b:"<<endl;
+			 cin>>b;
+			 gp1.Activate(a,b);
+			 break;
+   		  };
+	case '1': { //Start
+			cout<<"  Operation:  Start()"<<endl;
+			gp1.Start();
+			break;
+		    };
+	case '2': { //PayCredit 
+		    	cout<<"  Operation:  PayCredit()"<<endl;
+			gp1.PayCredit();
+			break;
+		    };
+	case '3': { //Reject 
+		    	cout<<"  Operation:  Reject()"<<endl;
+			gp1.Reject();
+			break;
+		    };
+	case '4': { //Cancel
+		    	cout<<"  Operation:  Cancel()"<<endl;
+			gp1.Cancel();
+			break;
+		    };
+	case '5': { //Approved
+		    	cout<<"  Operation:  Approved()"<<endl;
+			gp1.Approved();
+			break;
+		    };	
+	case '6': { //Super
+		      	cout<<"  Operation:  Super()"<<endl;
+			gp1.Super();
+			break;
+ 		    };
+	case '7': { //Regular
+		      	cout<<"  Operation:  Regular()"<<endl;
+			gp1.Regular();
+			break;
+ 		    };
+	case '8': { //StartPump
+		    	cout<<"  Operation:  StartPump()"<<endl;
+			gp1.StartPump();
+			break;
+		    };	
+	case '9': { //PumpGallon
+		    	cout<<"  Operation:  PumpGallon()"<<endl;
+			gp1.PumpGallon();
+			break;
+		    };	
+	case 'a': { //StopPump
+		    	cout<<"  Operation:  StopPump()"<<endl;		
+			gp1.StopPump();
+			break;
+		    };	
+      };// endswitch
+   }; //endwhile
+
